@@ -1,5 +1,6 @@
 package com.example.robert.zeittest;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -26,6 +27,7 @@ public class TimetableActivity extends ActionBarActivity {
     ListView listView;
     ArrayList<String> leftList = new ArrayList<String>();
     ArrayList<String> rightList = new ArrayList<String>();
+    int i = 0;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +35,20 @@ public class TimetableActivity extends ActionBarActivity {
         listView = (ListView) findViewById(R.id.lv_country);
         listView.setAdapter(new EfficientAdapter(this));
 
-        leftList.addAll(Arrays.asList(CountriesList.abbreviations));
-        rightList.addAll(Arrays.asList(CountriesList.countries));
+        //leftList.addAll(Arrays.asList(CountriesList.abbreviations));
+        //rightList.addAll(Arrays.asList(CountriesList.countries));
 
-        leftList.add(leftList.size(), "EndLinks");
-        rightList.add(rightList.size(), "EndRechts");
+//        leftList.add(leftList.size(), "EndLinks");
+//        rightList.add(rightList.size(), "EndRechts");
+//        i=i+1;
+
+        // Get the message from the intent
+        Intent intent = getIntent();
+//        leftList = intent.getStringArrayListExtra(WorkerMain.EXTRA_MESSAGE1);
+//        rightList = intent.getStringArrayListExtra(WorkerMain.EXTRA_MESSAGE2);
+        leftList = intent.getStringArrayListExtra("foo");
+        rightList = intent.getStringArrayListExtra("bar");
+
     }
 
     private class EfficientAdapter extends BaseAdapter {
@@ -48,7 +59,9 @@ public class TimetableActivity extends ActionBarActivity {
         }
 
         public int getCount() {
-            return CountriesList.abbreviations.length;
+            //return CountriesList.abbreviations.length + i;
+            //return i;
+            return leftList.size();
         }
 
         public Object getItem(int position) {

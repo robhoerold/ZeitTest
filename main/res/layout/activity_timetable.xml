@@ -7,7 +7,7 @@
     android:background="#ffccd0"
     >
     <TextView
-        android:text="Countries List"
+        android:text="Timetable"
         android:textColor="#b3000d"
         android:gravity="center_vertical|center_horizontal"
         android:textSize="26dip"
