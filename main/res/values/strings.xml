@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ZeitTest</string>
+    <string name="worker_name">Jackie Chan</string>
+    <string name="loggedin_text">Logged in on...</string>
+    <string name="loggedout_text">Logged out on...</string>
+    <string name="button_login">Login</string>
+    <string name="button_logout">Logout</string>
+    <string name="button_timetable">Timetable</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_timetable">Timetable</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>

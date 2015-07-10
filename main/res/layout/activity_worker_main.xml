@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".WorkerMain">
+
+    <Button
+        android:id="@+id/id_button_login"
+        android:text="@string/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage_login"
+    />
+
+    <Button
+        android:id="@+id/id_button_logout"
+        android:text="@string/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage_logout"
+    />
+
+    <TextView
+        android:id="@+id/id_loggedin_text"
+        android:text="@string/loggedin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_button_logout"
+        android:textColor="#66BB11"
+        />
+
+    <TextView
+        android:id="@+id/id_loggedout_text"
+        android:text="@string/loggedout_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_button_logout"
+        android:textColor="#FF0000"
+        />
+
+    <TextView
+        android:id="@+id/id_timestamp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_loggedout_text"
+        />
+
+    <Button
+        android:id="@+id/id_button_timetable"
+        android:text="@string/button_timetable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage_timetable"
+        android:layout_below="@+id/id_timestamp_text"
+        />
+
+
+
+</RelativeLayout>
